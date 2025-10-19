@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <title>1WIN MINES ⭐ XKING HACK</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background: #0e1218;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 16px;
+      overflow: hidden;
+    }
+
+    /* --- Loading Overlay --- */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none;
+    }
+    .loading-overlay img {
+      width: 90px;
+      height: 90px;
+      animation: spin 1.3s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* --- Status Boxes --- */
+    .status-box {
+      position: absolute;
+      top: 15px;
+      padding: 8px 12px;
+      border: 2px solid #00f5ff;
+      border-radius: 8px;
+      background: rgba(20, 25, 35, 0.8);
+      font-size: 14px;
+      font-weight: bold;
+      text-shadow: 0 0 8px #00f5ff;
+      box-shadow: 0 0 10px rgba(0,255,255,0.3);
+      user-select: none;
+    }
+
+    #activeBox {
+      left: 15px;
+    }
+
+    #serverBox {
+      right: 15px;
+      color: #0f0;
+      border-color: #0f0;
+      text-shadow: 0 0 8px #0f0;
+      box-shadow: 0 0 10px rgba(0,255,0,0.3);
+    }
+
+    /* --- Title Styling --- */
+    .title {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 24px;
+      text-align: center;
+      letter-spacing: 1px;
+      color: #00f5ff;
+      text-shadow: 0 0 10px rgba(0,255,255,0.4);
+    }
+
+    .board {
+      width: 100%;
+      max-width: 400px;
+      background: #1a1f2b;
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.2);
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .cell {
+      aspect-ratio: 1 / 1;
+      background: url('https://i.ibb.co/4R4WT7v6/1000023083.png') center/cover;
+      border-radius: 8px;
+      font-size: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .cell.mine {
+      background: none;
+      animation: popStar 0.5s ease forwards;
+    }
+
+    @keyframes shockIn {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.3); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes popStar {
+      0% { transform: scale(0); opacity: 0; }
+      80% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .predict-btn, .reset-btn {
+      background: linear-gradient(90deg, #009fff, #00f5ff);
+      color: #000;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .predict-btn:hover, .reset-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 420px) {
+      .title {
+        font-size: 26px;
+      }
+      .cell {
+        font-size: 30px;
+      }
+      .status-box {
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading...">
+  </div>
+
+  <!-- Status Boxes -->
+  <div class="status-box" id="activeBox">Active users: 230</div>
+  <div class="status-box" id="serverBox">Server: Active</div>
+
+  <div class="title">1WIN MINES ⭐ XKING HACK</div>
+
+  <div class="board">
+    <div class="grid" id="grid">
+      <script>
+        for (let i = 0; i < 25; i++) {
+          document.write('<div class="cell"></div>');
+        }
+      </script>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <button class="predict-btn" id="predictBtn">Predict</button>
+    <button class="reset-btn" id="resetBtn">Reset</button>
+  </div>
+
+  <script>
+    const predictBtn = document.getElementById('predictBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const cells = document.querySelectorAll('.cell');
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const activeBox = document.getElementById('activeBox');
+
+    // --- Show loading for 2 seconds ---
+    function showLoading(callback) {
+      loadingOverlay.style.display = 'flex';
+      setTimeout(() => {
+        loadingOverlay.style.display = 'none';
+        if (callback) callback();
+      }, 2000);
+    }
+
+    // --- Predict Button ---
+    predictBtn.addEventListener('click', () => {
+      showLoading(() => {
+        // Clear old
+        cells.forEach(cell => {
+          cell.textContent = '';
+          cell.classList.remove('mine');
+          cell.style.background = "url('https://i.ibb.co/4R4WT7v6/1000023083.png') center/cover";
+        });
+
+        // Random mine count (5 to 8)
+        const mineCount = Math.floor(Math.random() * 4) + 5;
+        const mineIndexes = [];
+        while (mineIndexes.length < mineCount) {
+          const randomIndex = Math.floor(Math.random() * cells.length);
+          if (!mineIndexes.includes(randomIndex)) {
+            mineIndexes.push(randomIndex);
+          }
+        }
+
+        // Animate mines appearing
+        mineIndexes.forEach((index, i) => {
+          const cell = cells[index];
+          setTimeout(() => {
+            cell.style.animation = 'shockIn 0.4s ease';
+            setTimeout(() => {
+              cell.style.animation = '';
+              cell.style.background = 'none';
+              cell.textContent = '⭐';
+              cell.classList.add('mine');
+            }, 300);
+          }, i * 150);
+        });
+      });
+    });
+
+    // --- Reset Button ---
+    resetBtn.addEventListener('click', () => {
+      showLoading(() => {
+        cells.forEach(cell => {
+          cell.textContent = '';
+          cell.classList.remove('mine');
+          cell.style.background = "url('https://i.ibb.co/4R4WT7v6/1000023083.png') center/cover";
+          cell.style.animation = '';
+        });
+      });
+    });
+
+    // --- Active Users Logic ---
+    let activeUsers = 250;
+    setInterval(() => {
+      const change = Math.random() > 0.5 ? 1 : -1;
+      activeUsers = Math.max(180, Math.min(560, activeUsers + change));
+      activeBox.textContent = `Active users: ${activeUsers}`;
+    }, 2000);
+  </script>
+
+</body>
+</html>
